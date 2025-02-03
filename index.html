@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Web</title>
+    <link rel= "fav icon" href=".//images/th (62).jpg">
+
+
+    <link rel="stylesheet" href="com.css/index.css">
+    <link rel="stylesheet" href="css/lightSlider.css"/>
+    
+    <!-- Include jQuery once -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Include lightSlider CSS and JavaScript -->
+    <link type="text/css" rel="stylesheet" href="css/lightslider.css" />                  
+    <script src="js/lightslider.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer"/>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+ <!-- <iframe src="./Html/Navbar.html" style="border: none; width: 100%; height: 100%;"></iframe> -->
+  <!--------------------------------------------------top start------------------------------------------------------->
+ <div class="mx-5" style="background-color: #791851d2; padding: 10px; border-bottom: 1px solid #ddd; font-size: 14px;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+        <!-- Left Section: Call -->
+        <div style="display: inline-flex; align-items: center; flex: 1; justify-content: flex-start; margin-bottom: 10px;">
+            <a href="tel:+01123455678990" style="color: white; text-decoration: none; display: inline-flex; align-items: center;">
+                <i class="fa-solid fa-phone" style="margin-right: 8px;"></i> Call: +01 123455678990
+            </a>
+        </div>
+
+        <!-- Middle Section: Social Media Icons -->
+        <div style="display: inline-flex; align-items: center; justify-content: center; flex: 1; margin-bottom: 10px; gap: 15px;">
+            <a href="#" style="color: white; font-size: 18px; text-decoration: none;">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#" style="color: white; font-size: 18px; text-decoration: none;">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#" style="color: white; font-size: 18px; text-decoration: none;">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" style="color: white; font-size: 18px; text-decoration: none;">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </div>
+
+        <!-- Right Section: Email -->
+        <div style="display: inline-flex; align-items: center; flex: 1; justify-content: flex-end; margin-bottom: 10px;">
+            <a href="mailto:mail@domain.com" style="color: white; text-decoration: none; display: inline-flex; align-items: center;">
+                <i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Email: mail@domain.com
+            </a>
+        </div>
+    </div>
+</div>
+<!----------------------------------------------------top end------------------------------------------------------------>
+<!---------------------------------------------------navbar start-------------------------------------------------------->
+
+
+  <!-------------------------------------------------------------------navbar end--------------------------------------->
+  <!--------------------------------------------------naavigation start------------------------------------------------>
+  <div class="navigation">
+    <h3>SHOP <i class="fa-solid fa-shop"></i></h3>
+
+    
+<div class="d-flex"> 
+        <ul class="menu">
+            <li><a href="#" id="shopLink" onclick="handleMouseClick()">Home</a></li>
+            <li><a href="./Html/men.html">Men</a> <span class="sale-label">Sale</span></li>
+            <li><a href="./Html/women.html">Women</a></li>
+            <li><a href="./Html/kids.html">Kids</a></li>
+            <li><a href="./Html/offer.html">%Offer</a></li>
+            <div class="theme-toggle">
+                <label for="theme-switch"><i class="fa-regular fa-moon"></i></label>
+                <input type="checkbox" id="theme-switch" onclick="toggletheme()"> 
+            </div>
+        </ul>
+        <!------------------------------------------------>
+        <style>
+            /* CSS for styling */
+            body {
+              margin: 20px;
+              background-color: rgb(240, 243, 243);
+            }
+        
+            .navbar {
+                padding: 1px 4px 5px 20px;
+                border-radius: 5px;
+                background-color: rgb(240, 243, 243);
+            }
+        
+            .form-inline {
+              display: flex;
+              align-items: center;
+            }
+        
+            .form-control {
+              padding: 5px 5px;
+              font-size: 16px;
+              width: 200px;
+              margin-right: 5px;
+              margin-bottom:2px;
+            }
+        
+            .btn {
+              font-size: 16px;
+              padding: 5px 15px;
+            }
+         
+            .search-results {
+              margin-top: 1px;
+            }
+        
+            .search-results ul {
+              list-style: none;
+              padding: 1px 2px;
+            }
+        
+            .search-results li {
+              padding: 5px 1px;
+              background-color: #c2c5c8;
+              margin-bottom: 5px;
+              border-radius: 3px;
+            }
+        
+            .search-results li:hover {
+              background-color: #d4edda;
+            }
+          </style>
+        </head>
+        <body>
+          <!nav class="navbar navbar-light bg-light justify-content-between">
+            <form class="form-inline" id="searchForm">
+              <input 
+                class="form-control mr-sm-1"
+                id="searchInput"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                Search
+              </button>
+            </form>
+          </nav>
+        
+          <!--div class="search-results" id="searchResults">
+            <ul id="resultList"></ul>
+          </div>
+        
+          <!--script>
+            // JavaScript for dynamic search items
+            const items = [
+              "Top categories",
+              "Fashion store",
+              "men's Shopping",
+              "Desserts",
+              "kids",
+              "baby material",
+              "girl baby dress",
+              "women fashion",
+              "offer",
+            
+            ];
+        
+            const SearchInput = document.getElementById("searchInput");
+            const searchResults = document.getElementById("searchResults");
+            const resultList = document.getElementById("resultList");
+        
+            document.getElementById("searchForm").addEventListener("submit", (event) => {
+              event.preventDefault(); // Prevent the form refreshing the page
+        
+              const query = searchInput.value.toLowerCase();
+              resultList.innerHTML = ""; // Clear previous results
+        
+              const filteredItems = items.filter((item) =>
+                item.toLowerCase().includes(query)
+              ); 
+        
+              if (filteredItems.length > 0) {
+                filteredItems.forEach((item) => {
+                  const li = document.createElement("li");
+                  li.textContent = item;
+                  resultList.appendChild(li);
+                });
+              } else {
+                const li = document.createElement("li");
+                li.textContent = "No results found";
+                resultList.appendChild(li);
+              }
+            });
+          </script>
+       <!------------------------------------------------>
+
+    </div>
+  
+   <div class="right-menu"> 
+        <a href="#" class="search"><i class="fa fa-search"></i></a>
+        <a href="#" class="user"><i class="fa fa-user"></i></a>
+        <a href="#"><i class="fa fa-shopping-cart"><span class="num-cart-product">0</span></i></a>
+    </div>
+</div>
+<div id="homeHover" class="hide">
+    <ul class="homeHoverList">
+        <li>shopping</li>
+        <li>Fashion design</li>
+        <li>women Fashion</li>
+        <li>Men Fashion</li>
+        <li>Kids section</li>
+        <li>New Arrivals</li>
+        <li>Watch</li>
+        <li>School material</li>
+    </ul>
+</div>
+    <script>
+        // Function to show or hide the dropdown
+        function handleMouseClick() {
+            var dropdown = document.getElementById("homeHover");
+    
+            // Toggle visibility when clicking the "shop" link
+            if (dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+            } else {
+                dropdown.style.display = "block";
+            }
+        }
+    
+        // Close the dropdown if the user clicks outside of it
+        window.addEventListener("click", function(event) {
+            var dropdown = document.getElementById("homeHover");
+            var shopLink = document.getElementById("shopLink");
+    
+            // If the clicked area is not the dropdown or the link, close the dropdown
+            if (!dropdown.contains(event.target) && event.target !== shopLink) {
+                dropdown.style.display = "none";
+            }
+        });
+    </script>
+
+<!------------------------------------------------------------navigation end------------------------------------------------------>
+
+<!----------------------------------------------------------------------signup start---------------------------------------------->
+<!-- Login and Signup Forms -->
+<div class="form">
+    <!-- Login Form -->
+    <div class="login-form">
+        <a href="#" class="form-cancel"><i class="fas fa-times"></i></a>
+        <strong>Log In</strong>
+        <form>
+            <input type="email" placeholder="Example@gmail.com" name="email" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <input type="submit" value="Log In">
+
+        </form>
+        <div class="form-btns">
+            <a href="#" class="forget">Forget Your Password?</a>
+            
+            <a href="#" class="sign-up-btn">Create Account</a>
+        </div>
+    </div>
+    <!-- Signup Form -->
+    <div class="sign-up-form">
+        <a href="#" class="form-cancel"><i class="fas fa-times"></i></a>
+    <div class="signup-container">
+        
+        <h2>Signup</h2>
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+                <span class="error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                <span class="error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+                <span class="error" id="passwordError"></span>
+            </div>
+            <div class="form-group">
+                <label for="confirmpassword">Confirm Password</label>
+                <input type="password" id="confirmpassword" placeholder="Confirm your password">
+                <span class="error" id="confirmpasswordError"></span>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number">
+                <span class="error" id="phoneError"></span>
+            </div>
+          
+            <button class="buttonup" type="submit">Signup</button>
+        </form>
+    </div>
+</div>
+</div>
+<!---------------------------------------------------------------------signup end---------------------------------------------->
+<!-------------------------------------------------------------------------slider start---------------------------------------->
+<div class="slider">
+    <div class="slides">
+        <div class="slides-container">
+            <img src="./images/shopping.jpg" class="slide" alt="Image 1">
+            <div class="overlay">
+                <div class="dis"> <h1><span>50% </span>off for your <br>first shopping</h1>DISCOUNT OFFER <span>30% </span>WITH NEW COLLECTION</div>
+                <button class="shop">shop now</button>
+            </div>
+           
+        </div>
+        <div class="slides-container">
+            <img src="./images/960x0.jpg" class="slide" alt="Image 2">
+            <div class="overlay">
+                <h1>FANTASTIC DESIGN <br>AND LOW PRICE <br> OFFER ON <br> T-SHIRT FOR <br><span>MEN </span>AND <span>WOMEN</span></h1>
+            </div>
+        </div>
+        <div class="slides-container">
+            <img src="./images/5d4400165b52d.jpeg" class="slide" alt="Image 3">
+            <div class="overlay">
+                <h1>LIFESTYLE COLLECTION<br>BUY ONE <br>GET ONE <br>FREE <br>Sale up to<span> 35% </span>off</h1>
+            </div>
+        </div>
+    </div>
+    <button class="prev" onclick="prevSlide()">❮</button>
+    <button class="next" onclick="nextSlide()">❯</button>
+
+</div>
+<!------------------------------------------------------slider end--------------------------------------------------->
+<!------------------------------------------fashion start------------------------------------------------------------->
+<h1>FASHION STORE  </h1>
+<center>
+<P class="paramen">Best men T-shirt up to <span>70% off</span> New trendy collection </P>
+</center>
+<div class="waffle-container" id="waffleContainer"></div>
+<!----------------------------------------------fashion end----------------------------------------------------------->
+<div id="popup" class="popup hide">
+    <div class="popup-content">
+        <span id="closePopup" class="close">&times;</span>
+        <img id="popupImage" src="" alt="">
+        <h3 id="popupName"></h3>
+        <p id="popupDescription"></p>
+        <p id="popupPrice"></p>
+    </div>
+</div>
+<script src="./file.js/index.js"></script>
+<!--------------------------------------------waffle script start----------------------------------------------------->
+<style>
+    .popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+
+    .popup.hide {
+        display: none;
+    }
+
+    .popup-content {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+    }
+
+    .popup-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .close:hover {
+        color: red;
+    }
+</style>
+<style>
+    .quantity-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .quantity-btn {
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: #f0f0f0;
+        color: #333;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .quantity-btn:hover {
+        background-color: #ddd;
+    }
+
+</style>
+
+
+
+<script> 
+    const waffleDetails = {
+        types: [
+            { name: "Belgian Waffle", description: "Light and crispy waffles pockets.", priceInRupees: 200, image: "./images/men2.webp" , rating: 5 },
+            { name: "Classic Waffle", description: "A perfect waffle with a golden.", priceInRupees: 150, image: "./images/men1.webp",rating:5 },
+            { name: "Chocolate Waffle", description: "Rich chocolate waffles lovers.", priceInRupees: 250, image: "./images/men3.webp",rating:5  },
+            { name: "Strawberry Waffle", description: "Sweet and strawberry waffles.", priceInRupees: 300, image: "./images/men5.webp" ,rating:5 },
+            { name: "Blueberry Waffle", description: "Fresh blueberries in every bite.", priceInRupees: 350, image: "./images/cat-6.webp",rating:5  },
+            { name: "Banana Waffle", description: "toys for kids", priceInRupees: 220, image: "./images/cat-1.webp",rating:5 },
+            { name: "Nutella Waffle", description: "Nutella spread with waffles.", priceInRupees: 280, image: "./images/cat-2.webp",rating:5  },
+            { name: "Cinnamon Waffle", description: "cinnamon-flavored waffles.", priceInRupees: 180, image: "./images/cat-3.webp" ,rating:5 },
+            { name: "Chocolate Waffle", description: " chocolate waffles lovers.", priceInRupees: 250, image: "./images/OIP (1).jpg" ,rating:5 },
+            { name: "Strawberry Waffle", description: "Sweet strawberry waffles.", priceInRupees: 300, image: "./images/OIP (2).jpg" ,rating:5 },
+            { name: "Blueberry Waffle", description: "Fresh blueberries in every bite.", priceInRupees: 350, image: "./images/th (3).jpg" ,rating:5 },
+            { name: "Chocolate Waffle", description: "Rich chocolate waffles lovers.", priceInRupees: 250, image: "./images/th (5).jpg" ,rating:5 },
+        ]
+    };
+    function handleMouseShow(){
+        const out = document.getElementById('homeHover')
+        out.classList.remove('hide');
+    }
+    function handleMouseOut(){
+        const out = document.getElementById('homeHover')
+        out.classList.add('hide');
+    }
+    function createWaffleCard(waffle) {
+    const card = document.createElement('div');
+    card.classList.add('waffle-card');
+
+    const image = document.createElement('img');
+    image.src = waffle.image;
+    image.alt = waffle.name;
+    image.onclick = () => {
+        const popup = document.getElementById('popup');
+        const popupImage = document.getElementById('popupImage');
+        const popupName = document.getElementById('popupName');
+        const popupDescription = document.getElementById('popupDescription');
+        const popupPrice = document.getElementById('popupPrice');
+      
+
+        // Set popup content
+        popupImage.src = waffle.image;
+        popupName.textContent = waffle.name;
+        popupDescription.textContent = waffle.description;
+        popupPrice.textContent = `Price: ₹${waffle.priceInRupees}`;
+        quantityDisplay.textContent = quantity;
+        popup.classList.remove('hide');
+    }
+    card.appendChild(image);
+
+    const info = document.createElement('div');
+    info.classList.add('waffle-info');
+
+    const name = document.createElement('h3');
+    name.textContent = waffle.name;
+
+    const description = document.createElement('p');
+    description.textContent = waffle.description;
+
+    const price = document.createElement('p');
+    price.textContent = `₹${waffle.priceInRupees}`;
+
+    // Add star rating
+    const stars = document.createElement('div');
+    stars.classList.add('stars');
+    for (let i = 0; i < 5; i++) {
+        const star = document.createElement('i');
+        star.className = i < waffle.rating ? 'fas fa-star' : 'far fa-star';
+        stars.appendChild(star);
+    }
+
+    // Create quantity section
+    const quantitySection = document.createElement('div');
+    quantitySection.classList.add('quantity-section');
+
+    const decrementButton = document.createElement('button');
+    decrementButton.textContent = '-';
+    decrementButton.classList.add('quantity-btn');
+
+    const quantityDisplay = document.createElement('span');
+    quantityDisplay.textContent = '0';
+    quantityDisplay.classList.add('quantity-display');
+
+    const incrementButton = document.createElement('button');
+    incrementButton.textContent = '+';
+    incrementButton.classList.add('quantity-btn');
+
+    let quantity = 0;
+
+    // Increment functionality
+    incrementButton.onclick = () => {
+        quantity++;
+        quantityDisplay.textContent = quantity;
+    };
+
+    // Decrement functionality
+    decrementButton.onclick = () => {
+        if (quantity > 0) {
+            quantity--;
+            quantityDisplay.textContent = quantity;
+        }
+    };
+
+    quantitySection.appendChild(decrementButton);
+    quantitySection.appendChild(quantityDisplay);
+    quantitySection.appendChild(incrementButton);
+
+    // Add "Add to Cart" button
+    const addToCartButton = document.createElement('button');
+    addToCartButton.textContent = "Add to Cart";
+    addToCartButton.classList.add('add-to-cart');
+    addToCartButton.onclick = () => {
+        if (quantity > 0) {
+            alert(`Added ${quantity} ${waffle.name}(s) to cart!`);
+        } else {
+            alert(`Please select at least 1 ${waffle.name} before adding to cart!`);
+        }
+    };
+
+    info.appendChild(name);
+    info.appendChild(description);
+    info.appendChild(price);
+    info.appendChild(stars);
+    info.appendChild(quantitySection);
+    info.appendChild(addToCartButton);
+    card.appendChild(info);
+
+    return card;
+}
+
+// Close popup logic
+document.getElementById('closePopup').onclick = () => {
+    document.getElementById('popup').classList.add('hide');
+};
+
+    const container = document.getElementById('waffleContainer');
+    waffleDetails.types.forEach(waffle => {
+        const card = createWaffleCard(waffle);
+        container.appendChild(card);
+    });
+</script>
+<!--------------------------------------------waffle script end----------------------------------------------------->
+<!--------------------------------------------men script start----------------------------------------------------->
+
+<div class="container">
+    <div class="menCloth">
+      <!-- First Image -->
+      <div class="">
+        <img src="./images/cloth1.jpg" alt="Cloth 1" width="500" class="img-fluid">
+      </div>
+
+      <!-- Text -->
+      <div class="">
+        <ul>
+          <li>
+            <h1 class="text-center">MEN'S SHOPPING</h1>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Second Image -->
+      <div class="">
+        <img src="./images/cloth2.jpg" alt="Cloth 2" width="500" class="img-fluid">
+      </div>
+    </div>
+  </div>
+  <div class="slideshow-container">
+    <div class="slide-row" id="slideRow">
+      <!-- Slide 1 -->
+      <div class="slide">
+        <img src="./images/1.webp" alt="">
+        <img src="./images/10.webp" alt="">
+        <img src="./images/11.webp" alt="">
+        <img src="./images/14.webp" alt="Cloth 6">
+        <img src="./images/3 (1).webp" alt="Cloth 9">
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide">
+        <img src="./images/12.webp" alt="Cloth 4">
+        <img src="./images/13.webp" alt="Cloth 5">
+        <img src="./images/14.webp" alt="Cloth 6">
+        <img src="./images/14.webp" alt="Cloth 6">
+        <img src="./images/3 (1).webp" alt="Cloth 9">
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide">
+        <img src="./images/2.webp" alt="Cloth 7" >
+        
+        <img src="./images/24.webp" alt="Cloth 8">
+        <img src="./images/3 (1).webp" alt="Cloth 9">
+        <img src="./images/14.webp" alt="Cloth 6">
+
+        <img src="./images/3 (1).webp" alt="Cloth 9">
+      </div>
+      <div class="slide">
+        <img src="./images/1.webp" alt="">
+        <img src="./images/10.webp" alt="">
+        <img src="./images/11.webp" alt="">
+        <img src="./images/14.webp" alt="Cloth 6">
+        <img src="./images/3 (1).webp" alt="Cloth 9">
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide">
+        <img src="./images/13.webp" alt="Cloth 5">
+        <img src="./images/14.webp" alt="Cloth 6">
+    
+        <img src="./images/12.webp" alt="Cloth 4">
+
+    </div>
+        <img src="./images/14.webp" alt="Cloth 6">
+        <img src="./images/3 (1).webp" alt="Cloth 9">
+        <img src="./images/24.webp" alt="Cloth 8">
+        <img src="./images/3 (1).webp" alt="Cloth 9">
+        <img src="./images/14.webp" alt="Cloth 6">
+        <img src="./images/24.webp" alt="Cloth 8">
+        <img src="./images/3 (1).webp" alt="Cloth 9">
+        <img src="./images/14.webp" alt="Cloth 6">
+      </div>
+    </div> 
+
+    <!-- Navigation Buttons -->
+    <button class="prevv" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="nextt" onclick="changeSlide(1)">&#10095;</button>
+  </div> 
+
+  <!-- Dots for navigation -->
+  <div class="dots" id="dotsContainer">
+    <span class="dot" onclick="goToSlide(0)"></span>
+    <span class="dot" onclick="goToSlide(1)"></span>
+    <span class="dot" onclick="goToSlide(2)"></span>
+  </div>
+
+
+<!--------------------------------------------men script end----------------------------------------------------->
+<!--div class="top p-2">
+    <div class="container">
+        <div class="row">
+            <!-- Left Section: Call -->
+            <!--div class="col-md-4 d-flex align-items-center">
+                <div class="left">
+                    <ul>
+                        <i class="fa-solid fa-landmark"></i>
+                        <li>New collection</li>
+                   
+                    
+                    <div id="collec" class="hidee">
+                        <ul class="collecList">
+                            <li>shopping</li>
+                            <li>Fashion design</li>
+                            <li>women Fashion</li>
+                            <li>Men Fashion</li>
+                            <li>Kids section</li>
+                            <li>New Arrivals</li>
+                            <li>Watch</li>
+                            <li>School material</li>
+                        
+                    </div>
+                    </div>
+                </div>
+            </ul>
+            <!-- Center Section: Search Bar >
+            <div class="col-md-1 d-flex align-items-center justify-content-center">
+                <div class="align">
+                  <div>
+                    <p> <img src="images/11.webp" alt="Image 1"> hi</p>
+                   
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-1 d-flex align-items-center justify-content-center">
+                  <div class="align">
+                    <div>
+                      <p> <img src="images/11.webp" alt="Image 1"> hi</p>
+                     
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-1 d-flex align-items-center justify-content-center">
+                  <div class="align">
+                    <div>
+                      <p> <img src="images/11.webp" alt="Image 1"> hi</p>
+                     </div>
+                  </div>
+                </div>
+                <div class="col-md-1 d-flex align-items-center justify-content-center">
+                  <div class="align">
+                    <div>
+                      <p> <img src="images/11.webp" alt="Image 1"> hi</p>
+                     </div>
+                  </div>
+                </div>
+                <div class="col-md-1 d-flex align-items-center justify-content-center">
+                  <div class="align">
+                    <div>
+                      <p> <img src="images/11.webp" alt="Image 1"> hi</p>
+                     </div>
+                  </div>
+                </div>
+                <!--div class="col-md-1 d-flex align-items-center justify-content-center">
+                    <div class="align">
+                      <div>
+                        <p> <img src="images/11.webp" alt="Image 1"> hi</p>
+                       
+                      </div>
+                    </div>
+                  </div-->
+                  <!--div class="col-md-1 d-flex align-items-center justify-content-center">
+                    <div class="align">
+                      <div>
+                        <p> <img src="images/11.webp" alt="Image 1"> hi</p>
+                       
+                      </div>
+                    </div>
+                  </div-->
+                  <!--div class="col-md-1 d-flex align-items-center justify-content-center">
+                    <div class="align">
+                      <div>
+                        <p> <img src="images/11.webp" alt="Image 1"> hi</p>
+                     </div>
+                    </div>
+                  </div>
+         </div>
+        </div>
+      </div-->
+<!------------------------------------------------------------------------------------------------------------->
+
+
+<div class="container">
+    <h1><i class="fa-solid fa-handshake" ></i>Desserts</h1>
+  
+
+    <div id="dessertContainer" class="item-container"></div>
+    
+    <div id="clothingContainer" class="item-container"></div>
+</div>
+
+<script>
+const collections = {
+    desserts: [
+        { name: " Delight", description: "Rich chocolate flavor.", price: 150, image: "./images/cat-1.webp", rating: 4 },
+        { name: "Strawberry Bliss", description: "Sweet strawberry treat.", price: 180, image: "./images/cat-2.webp", rating: 5 },
+        { name: "Strawberry Bliss", description: "Sweet strawberry treat.", price: 180, image: "./images/cat-3.webp", rating: 5 },
+        { name: "Vanilla Dream", description: "Classic vanilla taste.", price: 120, image: "./images/cat-4.webp", rating: 3 },
+        { name: " Delight", description: "Rich chocolate flavor.", price: 150, image: "./images/th (57).jpg",rating: 4 },
+        { name: "Strawberry Bliss", description: "Sweet strawberry treat.", price: 180, image: "./images/th (53).jpg", rating: 5 },
+        { name: "Strawberry Bliss", description: "Sweet strawberry treat.", price: 180, image:  "./images/OIP (13).jpg", rating: 5 },
+        { name: "Vanilla Dream", description: "Classic vanilla taste.", price: 120, image:  "./images/th (56).jpg", rating: 3 }
+    ], 
+  
+};
+// Create Card Function
+function createCard(item) {
+        const card = document.createElement('div');
+        card.classList.add('cloth-card');
+    
+        const image = document.createElement('img');
+        image.src = item.image;
+        image.alt = item.name;
+        card.appendChild(image);
+    
+        const info = document.createElement('div');
+        info.classList.add('cloth-info');
+    
+        const name = document.createElement('h3');
+        name.textContent = item.name;
+    
+        const description = document.createElement('p');
+        description.textContent = item.description;
+    
+        const price = document.createElement('p');
+        price.textContent = `₹${item.price}`;
+    
+        const ratings = document.createElement('div');
+        ratings.classList.add('ratings');
+        for (let i = 0; i < 5; i++) {
+            const star = document.createElement('i');
+            star.className = i < item.rating ? 'fas fa-star' : 'far fa-star';
+            ratings.appendChild(star);
+        }
+    
+        const favoriteButton = document.createElement('button');
+        favoriteButton.textContent = "Add to Favorites";
+        favoriteButton.classList.add('favorite-btn');
+        favoriteButton.onclick = () => alert(`${item.name} added to your favorites!`);
+    
+        info.appendChild(name);
+        info.appendChild(description);
+        info.appendChild(price);
+        info.appendChild(ratings);
+        info.appendChild(favoriteButton);
+        card.appendChild(info);
+    
+        return card;
+    }
+    
+    // Render Desserts
+    const dessertContainer = document.getElementById('dessertContainer');
+    collections.desserts.forEach(dessert => {
+        const card = createCard(dessert);
+        dessertContainer.appendChild(card);
+    });
+    
+    // Render Clothes
+    const clothingContainer = document.getElementById('clothingContainer');
+    collections.clothes.forEach(cloth => {
+        const card = createCard(cloth);
+        clothingContainer.appendChild(card);
+    });
+
+
+</script>
+<!--------------------------------------------------kids start------------------------------------------------------>
+<h1>KIDS ITEMS</h1>
+<div class="search-container">
+    <input type="text" id="search" placeholder="Search for kids items..."/>
+</div>
+<div id="kids-items-container">
+    <div class="kids-item" data-name="baby material">
+        <img src="./images/download (1).jpg" alt="">
+        <div class="data-meta">
+            <h5>off
+            <strong>20%</strong></h5>
+            </div>
+        <div class="icons">
+            <i class="fa-solid fa-eye"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+        <h3>baby material</h3>
+        <p>Price: $29</p>
+        <div class="kids-star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+
+        </div>
+        <h6 class="baby-item">Add to cart</h6>
+    </div>
+    <div class="kids-item" data-name="baby material">
+        <img src="./images/download (7).jpg" alt="">
+        <div class="data-meta">
+            <h5>off
+            <strong>20%</strong></h5>
+            </div>
+        <div class="icons">
+            <i class="fas fa-eye"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+        <h3>baby material</h3>
+        <p>Price: $340</p>
+        <div class="kids-star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+        </div>
+        <h6 class="baby-item">Add to cart</h6>    </div>
+    <div class="kids-item" data-name="kids dress">
+        <img src="./images/download (4).jpg" alt="">
+        <div class="data-meta">
+            <h5>off
+            <strong>20%</strong></h5>
+            </div>
+        <div class="icons">
+            <i class="fas fa-eye"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+        <h3>kids dress</h3>
+        <p>Price: $99</p>
+        <div class="kids-star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+
+        </div>
+        <h6 class="baby-item">Add to cart</h6>    </div>
+    <div class="kids-item" data-name="girl baby dress">
+        <img src="./images/download (3).jpg" alt="">
+        <div class="data-meta">
+            <h5>off
+            <strong>20%</strong></h5>
+            </div>
+        <div class="icons">
+            <i class="fas fa-eye"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+        <h3>girl baby dress</h3>
+        <p>Price: $89</p>
+        <div class="kids-star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+
+        </div>
+        <h6 class="baby-item">Add to cart</h6>    </div>
+    <div class="kids-item" data-name="boy baby dress">
+        <img src="./images/download (7).jpg" alt="">
+        <div class="data-meta">
+            <h5>off
+            <strong>20%</strong></h5>
+            </div>
+        <div class="icons">
+            <i class="fas fa-eye"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+        <h3>boy baby dress</h3>
+        <p>Price: $88</p>
+        <div class="kids-star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+
+        </div>
+        <h6 class="baby-item">Add to cart</h6>    </div>
+    <div class="kids-item" data-name="kids dress">
+        <img src="./images/OIP (24).jpg" alt="">
+        <div class="data-meta">
+            <h5>off
+            <strong>20%</strong></h5>
+            </div>
+        <div class="icons">
+            <i class="fas fa-eye"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+        <h3>kids dress</h3>
+        <p>Price: $99</p>
+        <div class="kids-star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+
+        </div>
+        <h6 class="baby-item">Add to cart</h6>    </div>
+    <div class="kids-item" data-name="girl baby dress">
+        <img src="./images/OIP (22).jpg" alt="">
+        <div class="data-meta">
+            <h5>off
+            <strong>20%</strong></h5>
+            </div>
+        <div class="icons">
+            <i class="fas fa-eye"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+        <h3>girl baby dress</h3>
+        <p>Price: $89</p>
+        <div class="kids-star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+
+        </div>
+        <h6 class="baby-item">Add to cart</h6>    </div>
+    <div class="kids-item" data-name="boy baby dress">
+        <img src="./images/OIP (36).jpg" alt="">
+        <div class="data-meta">
+            <h5>off
+            <strong>20%</strong></h5>
+            </div>
+        <div class="icons">
+            <i class="fas fa-eye"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+        <h3>boy baby dress</h3>
+        <p>Price: $88</p>
+        <div class="kids-star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+
+        </div>
+        <h6 class="baby-item">Add to cart</h6>    </div>
+    <div class="kids-item" data-name="girl baby dress">
+        <img src="./images/OIP (25).jpg" alt="">
+        <div class="data-meta">
+            <h5>off
+            <strong>20%</strong></h5>
+            </div>
+        <div class="icons">
+            <i class="fas fa-eye"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+        <h3>girl baby dress</h3>
+        <p>Price: $89</p>
+        <div class="kids-star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+
+        </div>
+        <h6 class="baby-item">Add to cart</h6>    </div>
+    <div class="kids-item" data-name="boy baby dress">
+        <img src="./images/OIP (36).jpg" alt="">
+        <div class="data-meta">
+            <h5>off
+            <strong>20%</strong></h5>
+            </div>
+        <div class="icons">
+            <i class="fas fa-eye"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+        <h3>boy baby dress</h3>
+        <p>Price: $88</p>
+        <div class="kids-star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+
+        </div>
+        <h6 class="baby-item">Add to cart</h6>    </div>
+    <div class="kids-item" data-name="girl baby dress">
+        <img src="./images/OIP (25).jpg" alt="">
+        <div class="data-meta">
+            <h5>off
+            <strong>20%</strong></h5>
+            </div>
+        <div class="icons">
+            <i class="fas fa-eye"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+        <h3>girl baby dress</h3>
+        <p>Price: $89</p>
+        <div class="kids-star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+
+        </div>
+        <h6 class="baby-item">Add to cart</h6>    </div>
+    <div class="kids-item" data-name="boy baby dress">
+        <img src="./images/download (6).jpg" alt="">
+        <div class="data-meta">
+            <h5>off
+            <strong>20%</strong></h5>
+            </div>
+        <div class="icons">
+            <i class="fas fa-eye"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+        <h3>boy baby dress</h3>
+        <p>Price: $88</p>
+        <div class="kids-star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+
+        </div>
+        <h6 class="baby-item">Add to cart</h6>    </div>
+</div>
+
+<div id="no-results">No results found</div>
+
+<script>
+    const searchInput = document.getElementById('search');
+    const kidsItemsContainer = document.getElementById('kids-items-container');
+    const kidsItems = document.querySelectorAll('.kids-item');
+    const noResultsMessage = document.getElementById('no-results');
+
+    searchInput.addEventListener('input', function () {
+        const searchTerm = searchInput.value.toLowerCase();
+        let hasResults = false;
+
+        kidsItems.forEach(item => {
+            const itemName = item.getAttribute('data-name').toLowerCase();
+            if (itemName.includes(searchTerm)) {
+                item.style.display = 'block'; // Show matching items
+                hasResults = true;
+            } else {
+                item.style.display = 'none'; // Hide non-matching items
+            }
+        });
+
+        kidsItems.forEach(item => {
+                const itemName = item.getAttribute('data-name').toLowerCase();
+                if (itemName.includes(searchTerm)) {
+                    item.style.display = 'block'; //
+                }
+            });
+        // Show or hide the "No Results" message
+        noResultsMessage.style.display = hasResults ? 'none' : 'block';
+    });
+ </script>
+ <!------------------------------------------------kids end---------------------------------------------------------------->
+<center><h1 class="Cate">Top Categories</h1></center>
+ <div class="product-list">
+    <!-- Product 1 -->
+    <div class="product">
+        <a href="/product/sunglass">
+            <img src="./images/imagegoggles.png" alt="Sunglass" class="product-image">
+            <h4 class="product-name">Sunglass</h4>
+            <h4 class="product-price">$150.00</h4>
+        </a>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product">
+        <a href="/product/makeup">
+            <img src="./images/th (61).jpg" alt="Makeup" class="product-image">
+            <h4 class="product-name">Makeup</h4>
+            <h4 class="product-price">$250.00</h4>
+        </a>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product">
+        <a href="/product/smart-watch">
+            <img src="./images/th (67).jpg" alt="Smart Watch" class="product-image">
+            <h4 class="product-name">Smart Watch</h4>
+            <h4 class="product-price">$350.00</h4>
+        </a>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product">
+        <a href="/product/lipstick">
+            <img src="./images/th (63).jpg" alt="Lipstick" class="product-image">
+            <h4 class="product-name">Lipstick</h4>
+            <h4 class="product-price">$15.00</h4>
+        </a>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="product">
+        <a href="/product/green-plant">
+            <img src="./images/th (64).jpg" alt="Green Plant" class="product-image">
+            <h4 class="product-name">Green Plant</h4>
+            <h4 class="product-price">$55.00</h4>
+        </a>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product">
+        <a href="/product/bonsai-tree">
+            <img src="./images/th (70).jpg" alt="Bonsai Tree" class="product-image">
+            <h4 class="product-name">Bonsai Tree</h4>
+            <h4 class="product-price">$535.00</h4>
+        </a>
+    </div>
+    
+</div>
+<script>
+    // Example: Console log when clicking on a product
+document.querySelectorAll('.product a').forEach((productLink) => {
+    productLink.addEventListener('click', (event) => {
+        console.log('Product clicked:', productLink.textContent.trim());
+    });
+});
+
+</script>
+<!--------------------------------------marq start------------------------------------------------------------------------->
+<div class="img-marq">
+    <marquee behaviour="alternate" direction="" scrollamount="30">
+    <img src="images/th (47).jpg" alt="">
+    <img src="images/th (46).jpg" alt="">
+    <img src="images/th (48).jpg" alt="">
+    <img src="images/th (50).jpg" alt="">
+    <img src="images/th (45).jpg" alt="">
+    <img src="images/th (51).jpg" alt="">
+    <img src="images/th (49).jpg" alt="">
+    </marquee>
+    </div>
+
+<!------------------------------------------------------------marq end------------------------------------------------------------------>
+<!-------------------------------------------------------------footer start------------------------------------------------------------->
+    <div class="footer">
+        <div class="container flex">
+            <div class="row">
+                <!-- Footer About Section -->
+                <div class="footer-section">
+                    <h2 class="footer-head">SHOP</h2>
+                    <ul class="footer-links">
+                        <li><a href="#">Gift Card</a></li>
+                        <li><a href="#">Drinks</a></li>
+                        <li><a href="#">Store Locator</a></li>
+                        <li><a href="#">Saree</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Footer Help Section -->
+                <div class="footer-section">
+                    <h2 class="footer-head">HELP</h2>
+                    <ul class="footer-links">
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Return</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Payments</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Footer Contact Us Section -->
+                <div class="footer-section">
+                    <h2 class="footer-head">CONTACT US</h2>
+                    <ul class="footer-links">
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Footer Address Section -->
+                <div class="footer-section1">
+                    <h3 class="footer-add">ADDRESS</h3>
+                    <p>123 Grand Rama,</p>
+                    <p>Krung Thep Maha Nakhon 10400</p>
+                    <p>Trichy</p>
+                    <p>60002</p>
+                </div> <!-- End of row -->
+<!----------------------------------------------------------footer end------------------------------------------------------------>
+<script>
+    let currentSlideCooling = 0;
+
+    // Change slide (next or previous)
+    function changeSlide(direction) {
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+      const slideRow = document.getElementById('slideRow');
+
+      currentSlideCooling += direction;
+
+      // Loop back if out of bounds
+      if (currentSlideCooling >= slides.length) {
+        currentSlideCooling = 0;
+      } else if (currentSlideCooling < 0) {
+        currentSlideCooling = slides.length - 1;
+      }
+
+      // Update slide-row position
+      const offset = currentSlideCooling * -100;
+      slideRow.style.transform = `translateX(${offset}%)`;
+
+      // Update dot indicators
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlideCooling);
+      });
+    }
+
+    // Navigate to a specific slide
+    function goToSlide(slideIndex) {
+      currentSlideCooling = slideIndex;
+      changeSlide(0); // Update slides and dots
+    }
+
+    // Initialize first dot as active
+    document.querySelector('.dot').classList.add('active');
+  </script>
+
+
+
+</body>
+</html> 
+
+
+
